@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
-#esto es una prueba
+
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',#pip install whitenoise
     'django.contrib.admin',
