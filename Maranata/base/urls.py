@@ -18,6 +18,7 @@ from django.urls import path, include
 
 from base.view import inicio
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('adm/',inicioAdmin,name='inicio-admin'), 
