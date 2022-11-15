@@ -1,14 +1,10 @@
 {% extends 'partials/body.html' %}
 {% load crispy_forms_tags %}
 {% block contenido %}
-    <h1>estudiantes</h1>
-    <form action="">
+    <h1>grado</h1>
+    <form method="POST">
         {% csrf_token %}
         {{form|crispy}}
     </form>
 
 {% endblock contenido %} 
-
-
-
-
