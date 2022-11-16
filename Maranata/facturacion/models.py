@@ -1,11 +1,11 @@
-from xml.dom.minidom import Document
+
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from estudiantes.models import Estudiante, Usuario
+from estudiantes.models import Usuario,Estudiante
 
 # Create your models here.
 class ReciboPension (models.Model):
-    mesPagago=models.CharField(max_length=2, verbose_name="Mes Pagado")
+    mesPagado=models.CharField(max_length=2, verbose_name="Mes Pagado")
     valorP_M=models.CharField(max_length=20, verbose_name='Valor Pensión Mensual')
     fechaP_R_P=models.DateTimeField(max_length=10, verbose_name="Fecha De Pago De Recibo Pensión") #LO CONSULTÉ
     fechaE_R=models.DateTimeField(max_length=10, verbose_name="Fecha De Emisión De Recibo") #LO CONSULTÉ
