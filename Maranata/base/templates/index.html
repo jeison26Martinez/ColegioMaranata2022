@@ -1,65 +1,122 @@
+
 {% extends 'partials/body.html' %}
 
+{% block menu %}
+<a href="#"><i class="fas fa-user-plus"></i><span>Crear Usuario</span></a>
+<a href="#"><i class="fas fa-search"></i><span>Buscar Usuario</span></a>
+<a href="#"><i class="fas fa-user-edit"></i><span>Modificar Usuario</span></a>
+<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar Usuario</span></a>
+{% endblock menu %}
+
 {% block contenido %}
-<div class="row collapse collapse-horizontal" id="gUsuario">
-    <div class="barra-lateral col-12 col-sm-auto">
-      <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-        <a href="#"><i class="fas fa-user-plus"></i><span>Crear Usuario</span></a>
-        <a href="#"><i class="fas fa-search"></i><span>Buscar Usuario</span></a>
-        <a href="#"><i class="fas fa-user-edit"></i><span>Modificar Usuario</span></a>
-        <a href="#"><i class="fas fa-clipboard-list"></i><span>Listar Usuario</span></a>
-      </nav>
-    </div>
 
-    <!-- DATOS PERSONALES -->
+<!-- DATOS PERSONALES -->
 
-    <div class="col p-5 rounded mx-5 ">
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="p-5 mb-4 mi-azul rounded-3">
-          <div class="container-fluid text-light py-5">
-            <h1 class="display-5 text-center fw-bold">Datos personales</h1>
-            <div class="row">
-              <div class="col"> <label for="documento" class="form-label "> Tipo Documento</label>
-                <select class="form-select" id="documento" required>
-                  <option selected disabled value="">Tipo...</option>
-                  <option value="">TI</option>
-                  <option value="">CC</option>
-                </select>
-              </div>
-              <div class="col"><label for="n-documento" class="form-label">Número Documento</label>
-                <input type="text" class="form-control" id="n-documento" placeholder="Número de Documento" required></div>
-            </div>
-            <div class="row">
-              <div class="col"> <label for="nombre" class="form-label">Nombres</label>
-                <input type="text" class="form-control" name="nombre" placeholder="Nombres" required></div>
-              <div class="col"> <label for="apellido" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" name="apellido" placeholder="Apellidos" required></div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <label for="nacimiento" class="form-label">Fecha Nacimiento</label>
-                <input type="date" name="nacimiento" id="" class="form-control"></div>
-              <div class="col"><label for="celular" class="form-label">Celular</label>
-                <input type="tel" class="form-control" name="celular" placeholder="Celular" required></div>
-            </div>
-            <div class="row">
-              <div class="col"> <label for="correo" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" name="correo" placeholder="liceomaranata@gmmail.com" required></div>
-             
-            </div>
-            <div class="row">
-              <div class="col"> <label for="pass" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="pass" placeholder="Contraseña" required></div>
-              <div class="col"> <label for="r-pass" class="form-label">Confirmar Contraseña</label>
-                <input type="password" class="form-control" name="r-pass" placeholder="Confirmar Contraseña" required></div>
-            </div>
+<div class="col p-5 rounded mx-5">
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="p-5 mb-4 mi-azul rounded-3">
+      <div class="container-fluid text-light py-5">
+        <h1 class="display-5 text-center fw-bold">Datos personales</h1>
+        <div class="row">
+          <div class="col">
+            <label for="documento" class="form-label"> Tipo Documento</label>
+            <select class="form-select" id="documento" required>
+              <option selected disabled value="">Tipo...</option>
+              <option value="">TI</option>
+              <option value="">CC</option>
+            </select>
           </div>
-          <div class="text-center">
-            <button class="btn btn-light" type="submit"><i class="fas fa-user-plus"></i> Crear</button>
+          <div class="col">
+            <label for="n-documento" class="form-label">Número Documento</label>
+            <input
+              type="text"
+              class="form-control"
+              id="n-documento"
+              placeholder="Número de Documento"
+              required
+            />
           </div>
-        </div> 
-      </form>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="nombre" class="form-label">Nombres</label>
+            <input
+              type="text"
+              class="form-control"
+              name="nombre"
+              placeholder="Nombres"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="apellido" class="form-label">Apellidos</label>
+            <input
+              type="text"
+              class="form-control"
+              name="apellido"
+              placeholder="Apellidos"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="nacimiento" class="form-label">Fecha Nacimiento</label>
+            <input type="date" name="nacimiento" id="" class="form-control" />
+          </div>
+          <div class="col">
+            <label for="celular" class="form-label">Celular</label>
+            <input
+              type="tel"
+              class="form-control"
+              name="celular"
+              placeholder="Celular"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input
+              type="email"
+              class="form-control"
+              name="correo"
+              placeholder="liceomaranata@gmmail.com"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="pass" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              name="pass"
+              placeholder="Contraseña"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="r-pass" class="form-label">Confirmar Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              name="r-pass"
+              placeholder="Confirmar Contraseña"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-light" type="submit">
+          <i class="fas fa-user-plus"></i> Crear
+        </button>
+      </div>
     </div>
-  </div>
+  </form>
+</div>
+
 {% endblock contenido %}
-    
