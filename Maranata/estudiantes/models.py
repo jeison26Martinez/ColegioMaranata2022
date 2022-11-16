@@ -1,6 +1,7 @@
 
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+
 # Create your models here.
 class Grado (models.Model):
     nombre=models.CharField(max_length=60, verbose_name="Nombre")

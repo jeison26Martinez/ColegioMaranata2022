@@ -1,0 +1,22 @@
+{% extends 'partials/body.html' %}
+{% load crispy_forms_tags %}
+{% block menu %}
+
+<a href="#"><i class="fas fa-user-plus"></i><span>Crear
+    Recibo de Matrícula</span></a>
+<a href="#"><i class="fas fa-search"></i><span>Buscar
+    Recibo de Matrícula</span></a>
+<a href="#"><i class="fas fa-user-edit"></i><span>Modificar
+    Recibo de Matrícula</span></a>
+<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
+    Recibo de Matrícula</span></a>
+{% endblock menu %}
+{% block contenido %}
+
+
+    <h1>Recibo Matrícula</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+    </form>
+{% endblock contenido %} 
