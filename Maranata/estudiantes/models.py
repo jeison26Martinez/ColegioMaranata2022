@@ -19,6 +19,7 @@ class Usuario (models.Model):
         RC='R.C', _('Registro Civil' )
         OT='Otro', _('Otro Tipo de Documento')
     tipoDocumento=models.CharField(max_length=6, choices=TipoDocumento.choices, default=TipoDocumento.TI, verbose_name="Tipo de Documento")
+    documento=models.CharField(max_length=20, verbose_name="Documento")
     nombres=models.CharField(max_length=60, verbose_name="Nombres")
     apellidos=models.CharField(max_length=60, verbose_name="Apellidos")
     fechaNacimiento=models.DateField(verbose_name="fecha de nacimiento", help_text=u"MM/DD/AAAA")
