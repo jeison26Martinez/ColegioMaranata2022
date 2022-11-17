@@ -1,6 +1,6 @@
 {% load static %}
 <header class="navbar-expand-md  bg-dark">
-    <a class="navbar-brand" href="Principal.HTML">
+    <a class="navbar-brand" href="{% url 'inicio' %}">
       <img width="40px" src= "{% static 'img/Logomaranata.png' %}" >      <span class="text-white"> | Liceo Maranata</span>
     </a>
   </header>
@@ -18,7 +18,7 @@
               <a class="nav-link " href="{% url 'estudiantes' %}">Gestión de estudiantes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Grado</a>
+              <a class="nav-link" href="{% url 'grado' %}">Grado</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="{% url 'reciboMatricula' %}">Gestión recibo matricula</a>
