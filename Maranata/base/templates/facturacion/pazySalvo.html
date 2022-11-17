@@ -3,30 +3,24 @@
 
 {% block menu %}
 <a href="#"><i class="fas fa-user-plus"></i><span>Crear
-    Estudiante</span></a>
+    Paz y Salvo</span></a>
 <a href="#"><i class="fas fa-search"></i><span>Buscar
-    Estudiante</span></a>
+    Paz y Salvo</span></a>
 <a href="#"><i class="fas fa-user-edit"></i><span>Modificar
-    Estudiante</span></a>
+    Paz y Salvo</span></a>
 <a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
-    Estudiante</span></a>
+    Paz y Salvo</span></a>
+
 {% endblock menu %}
 
 {% block contenido %}
-    <h1>estudiantes</h1>
-    <form action="">
+    <h1>Paz y Salvo</h1>
+    <form method="POST">
         {% csrf_token %}
         {{form|crispy}}
     </form>
-
-
-<div class="text-center">
-    <button class="btn btn-light" type="submit"><i class="fas
-        fa-user-plus"></i> Crear Estudiante</button>
-  </div>
-
+    <div class="text-center">
+        <button class="btn btn-light" type="submit"><i class="fas
+            fa-user-plus"></i> Crear Paz y Salvo</button>
+      </div>
 {% endblock contenido %} 
-
-
-
-

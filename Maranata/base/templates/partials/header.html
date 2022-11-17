@@ -1,8 +1,7 @@
 {% load static %}
 <header class="navbar-expand-md  bg-dark">
-    <a class="navbar-brand" href="Principal.HTML">
-      <img src="img/Logomaranata.png" width="40px">
-      <span class="text-white"> | Liceo Maranata</span>
+    <a class="navbar-brand" href="{% url 'inicio' %}">
+      <img width="40px" src= "{% static 'img/Logomaranata.png' %}" >      <span class="text-white"> | Liceo Maranata</span>
     </a>
   </header>
 
@@ -11,19 +10,18 @@
     <div class="container-expand">
       <nav class="navbar navbar-expand bg-dark">
         <div class="container-fluid">
-          <ul class="nav nav-tabs">
+          <ul class="nav nav-tabs" >
             <li class="nav-item">
-              <a class="nav-link " data-bs-toggle="collapse" data-bs-target="#gUsuario" aria-expanded="false"
-                aria-controls="collapseWidthExample" aria-current="page" href="#">Gestión de usuarios</a>
+              <a class="nav-link " href="{% url 'inicio' %}">Gestión de usuarios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Gestión de estudiantes</a>
+              <a class="nav-link " href="{% url 'estudiantes' %}">Gestión de estudiantes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Grado</a>
+              <a class="nav-link" href="{% url 'grado' %}">Grado</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ">Gestión recibo matricula</a>
+              <a class="nav-link " href="{% url 'reciboMatricula' %}">Gestión recibo matricula</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Año lectivo</a>
