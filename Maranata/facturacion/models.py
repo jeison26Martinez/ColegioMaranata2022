@@ -24,10 +24,6 @@ class PazySalvo (models.Model):
         ACTIVO='1', _('Activo')
         INACTIVO='0', _('Inactivo')
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
-    class estadoEstudiante(models.TextChoices):
-        ACTIVO='1', _('Activo')
-        INACTIVO='0', _('Inactivo')
-    estadoEstudiante=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado Estudiante")
     ReciboPension=models.ForeignKey(ReciboPension,on_delete=models.CASCADE,verbose_name="Recibo Pensión")
 
 class AñoLectivo(models.Model):

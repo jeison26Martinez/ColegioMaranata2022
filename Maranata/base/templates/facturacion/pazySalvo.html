@@ -1,0 +1,26 @@
+{% extends 'partials/body.html' %}
+{% load crispy_forms_tags %}
+
+{% block menu %}
+<a href="#"><i class="fas fa-user-plus"></i><span>Crear
+    Paz y Salvo</span></a>
+<a href="#"><i class="fas fa-search"></i><span>Buscar
+    Paz y Salvo</span></a>
+<a href="#"><i class="fas fa-user-edit"></i><span>Modificar
+    Paz y Salvo</span></a>
+<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
+    Paz y Salvo</span></a>
+
+{% endblock menu %}
+
+{% block contenido %}
+    <h1>Paz y Salvo</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+    </form>
+    <div class="text-center">
+        <button class="btn btn-light" type="submit"><i class="fas
+            fa-user-plus"></i> Crear Paz y Salvo</button>
+      </div>
+{% endblock contenido %} 
