@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from facturacion.forms import ReciboMatriculaForms,AñoLectivoForms,ReciboPensionForms,PazySalvoForms
-
+from facturacion.models import PazySalvo
 # Create your views here.
 def reciboMatricula(request):
     form=ReciboMatriculaForms()
@@ -10,7 +10,7 @@ def reciboMatricula(request):
     return render(request,'facturacion/reciboMatricula.html',context)
 
 
-def AñoLectivo(request):
+def añoLectivo(request):
     form=AñoLectivoForms()
     context={
     'form':form
@@ -18,7 +18,7 @@ def AñoLectivo(request):
     return render(request,'facturacion/AñoLectivo.html',context)
 
 
-def ReciboPension(request):
+def reciboPension(request):
     form=ReciboPensionForms()
     context={
     'form':form
@@ -32,3 +32,12 @@ def pazySalvo(request):
     'form':form
     }
     return render(request,'facturacion/pazySalvo.html',context)
+
+def pazySalvo_listar(request):
+    pazySalvos=PazySalvo.objects.all()
+    context={
+    'pazySalvos':pazySalvos,
+    }
+    return render(request,'facturacion/pazySalvo_listar.html',context)
+
+
