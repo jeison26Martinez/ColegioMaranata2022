@@ -29,6 +29,22 @@ def usuario_listar(request):
     return render(request,"estudiantes/usuarios_listar.html",context)
 
 
+def usuario_buscar(request):
+    usuarios=Usuario.objects.all()
+    context={
+        "usuarios":usuarios
+    }
+    return render(request,"estudiantes/usuarios_buscar.html",context)
+
+
+def usuario_modificar(request):
+    usuarios=Usuario.objects.all()
+    context={
+        "usuarios":usuarios
+    }
+    return render(request,"estudiantes/usuarios_modificar.html",context)
+
+
 
 
 
