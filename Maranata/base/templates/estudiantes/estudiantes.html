@@ -2,18 +2,11 @@
 {% load crispy_forms_tags %}
 
 {% block menu %}
-<a href="#"><i class="fas fa-user-plus"></i><span>Crear
-    Estudiante</span></a>
-<a href="#"><i class="fas fa-search"></i><span>Buscar
-    Estudiante</span></a>
-<a href="#"><i class="fas fa-user-edit"></i><span>Modificar
-    Estudiante</span></a>
-<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
-    Estudiante</span></a>
+{% include 'estudiantes/estudiante_menu.html' %}
 {% endblock menu %}
 
 {% block contenido %}
-    <h1>estudiantes</h1>
+    <h1>Crear Estudiante</h1>
     <form action="">
         {% csrf_token %}
         {{form|crispy}}

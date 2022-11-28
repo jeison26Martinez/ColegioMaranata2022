@@ -1,0 +1,56 @@
+{% extends 'partials/body.html' %}
+
+{% block menu %}
+{% include 'estudiantes/usuarios_menu.html' %}
+{% endblock menu %}
+
+{% block contenido %}
+<div class="col p-5 rounded mx-5 ">
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="p-5 mb-4 bg-light rounded-3">
+
+        <!--TABLA-->
+        <table id="example" class="display " style="width:100%">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Tipo de documento</th>
+                  <th>Número de documento</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+            
+            {% for usuario in usuarios %}
+            <tr>
+                <td> {{usuario.id}} </td>
+                <td> {{usuario.nombres}} </td>
+                <td> {{usuario.apellidos}} </td>
+                <td> {{usuario.tipoDocumento}} </td>
+                <td> {{usuario.documento}} </td>               
+            </tr>
+            {% endfor %}
+                
+              
+
+      </table>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+      <script>
+          $(document).ready(function () {
+              $('#example').DataTable();
+          });
+      </script>
+      <script>
+          $("#menu-btn").click(function() {
+              $("#menu").toggleClass("active");
+          });
+      </script>
+      </div> 
+    </form>
+  </div>
+
+{% endblock contenido %}
