@@ -1,0 +1,82 @@
+{% extends 'partials/body.html' %}
+
+{% block menu %}
+{% include 'facturacion/añolectivo_menu.html' %}
+{% endblock menu %}
+
+{% block contenido %}
+
+<div class="col p-5 mb-4 mi-azul rounded-3 text-light">
+    <div class="row">
+        <div class="col-6">
+            <div class="col"><label for="n-documento" class="form-label">Número
+                Documento</label>
+              <input type="text" class="form-control" id="n-documento"
+                placeholder="Número de Documento" required>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="col"><label for="n-documento" class="form-label">Número Recibo</label>
+              <input type="text" class="form-control" id="n-documento"
+                placeholder="Número Recibo" required></div>
+        </div>
+  
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <br>
+        <label for="nacimiento" class="form-label">Fecha Pago Recibo de Pensión</label>
+          <input type="date" name="nacimiento" id="" class="form-control">
+          <label for="nacimiento" class="form-label">Fecha Emisión Recibo</label>
+          <input type="date" name="nacimiento" id="" class="form-control">
+        </div>
+        <div class="col-6 text-center">
+            <br>
+            <br>
+            <br>
+            <br>
+            <form class="text-cente" method="get">
+                <p>
+                  <label for="favoriteOnly">Mes Pagado</label>
+                  <select name="favoriteOnly" id="favoriteOnly">
+                    <option>Enero</option>
+                    <option>Febrero</option>
+                    <option>Marzo</option>
+                    <option>Abril</option>
+                    <option>Mayo</option>
+                    <option>Junio</option>
+                    <option>Julio</option>
+                    <option>Agosto</option>
+                    <option>Septiembre</option>
+                    <option>Octubre</option>
+                    <option>Noviembre</option>
+                    <option>Diciembre</option>
+                  </select>
+                </p>
+              </form>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <br>
+          <p> Estado de Estudiante<br>
+            <label><input type="radio" name="Estado" value="Activo"> Activo</label><br>
+            <label><input type="radio" name="Estado" value="inactivo" checked>
+              inactivo</label><br>
+          </p>
+        </div>
+        <div class="col-6">
+            <div class="col"><label for="n-documento" class="form-label">Valor Total Mensual</label>
+              <input type="text" class="form-control" id="n-documento"
+                placeholder="Valor Pensión Mensual" required></div>
+        </div>
+        
+    </div>
+    <br>
+    <div class="text-center">
+        <button class="btn btn-light" type="submit"><i class="fas fa-user-edit"></i> Crear Recibo de Pensión</button>
+    </div>
+  </div>
+
+{% endblock contenido %}

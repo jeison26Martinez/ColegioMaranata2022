@@ -1,0 +1,61 @@
+{% extends 'partials/body.html' %}
+
+{% block menu %}
+{% include 'facturacion/pazySalvo_menu.html' %}
+{% endblock menu %}
+
+{% block contenido %}
+
+<div class="p-5 mb-4 mi-azul rounded-3 text-light">
+  <h1 class="display-5 text-center fw-bold">Modificar Paz ySalvo</h1>
+
+  <form class="row needs-validation" novalidate>
+    <div class="col"><label for="n-documento" class="form-label">Número
+        Documento</label>
+      <input type="text" class="form-control" id="n-documento"
+        placeholder="Número de Documento" required>
+    </div>
+    <div class="col"> <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" name="nombre" placeholder="Nombre"
+        required>
+      <br>
+      <p>
+        <label for="favoriteOnly">Grado</label>
+        <select name="favoriteOnly" id="favoriteOnly">
+          <option>Prescolar</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+        </select>
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p> Estado de Estudiante<br>
+          <label><input type="radio" name="Estado" value="Activo"> Activo</label><br>
+          <label><input type="radio" name="Estado" value="inactivo" checked>
+            inactivo</label><br>
+        </p></div>
+      <div class="col-6">
+        <div class="col">
+          <label for="nacimiento" class="form-label">Fecha Emisión Recibo</label>
+          <input type="date" name="nacimiento" id="" class="form-control"></div>
+      </div>
+    </div>
+
+  </form>
+  <div class="text-center">
+    <button class="btn btn-light" type="submit"><i class="fas fa-user-edit"></i>
+      Modificar</button>
+  </div>
+</div>
+
+{% endblock contenido %}
