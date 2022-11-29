@@ -2,25 +2,20 @@
 {% load crispy_forms_tags %}
 
 {% block menu %}
-<a href="#"><i class="fas fa-user-plus"></i><span>Crear
-    Año Lectivo</span></a>
-<a href="#"><i class="fas fa-search"></i><span>Buscar
-    Año Lectivo</span></a>
-<a href="#"><i class="fas fa-user-edit"></i><span>Modificar
-    Año Lectivo</span></a>
-<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
-    Año Lectivo</span></a>
-
+{% include 'facturacion/añolectivo_menu.html' %}
 {% endblock menu %}
 
 {% block contenido %}
-    <h1>Año Lectivo</h1>
-    <form method="POST">
+
+<div class="col p-5 mi-azul rounded-3 text-light">
+    <h1 class="display-5 text-center fw-bold">Crear Año Lectivo</h1>
+    <form action="">
         {% csrf_token %}
         {{form|crispy}}
+        <div class="text-center">
+            <button class="btn btn-light" type="submit"><i class="fas
+                    fa-user-plus"></i>Crear</button>
+        </div>
     </form>
-    <div class="text-center">
-        <button class="btn btn-light" type="submit"><i class="fas
-            fa-user-plus"></i> Crear Año Lectivo</button>
-      </div>
-{% endblock contenido %} 
+</div>
+{% endblock contenido %}

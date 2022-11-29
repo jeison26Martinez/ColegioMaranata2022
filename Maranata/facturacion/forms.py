@@ -17,11 +17,10 @@ class ReciboPensionForms(ModelForm):
     class Meta:
         model=ReciboPension
         exclude=["estado"]
-        
-        
 
 
 class PazySalvoForms(ModelForm):
     class Meta:
         model=PazySalvo
+        fields="__all__"
         exclude=["estado"]

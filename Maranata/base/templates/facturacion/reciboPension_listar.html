@@ -1,0 +1,33 @@
+{% extends 'partials/body.html' %}
+
+{% block menu %}
+{% include 'facturacion/reciboPension_menu.html' %}
+{% endblock menu %}
+
+{% block contenido %}
+
+        <!--TABLA-->
+<div class="col p-5 rounded mx-5 ">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Número de Documento</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Activo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>inactivo</td>
+          </tr>
+        </tbody>
+      </table>
+</div>        
+{% endblock contenido %}

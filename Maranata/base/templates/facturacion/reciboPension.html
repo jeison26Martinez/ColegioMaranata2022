@@ -2,25 +2,23 @@
 {% load crispy_forms_tags %}
 
 {% block menu %}
-<a href="#"><i class="fas fa-user-plus"></i><span>Crear
-    Recibo Pensión</span></a>
-<a href="#"><i class="fas fa-search"></i><span>Buscar
-    Recibo Pensión</span></a>
-<a href="#"><i class="fas fa-user-edit"></i><span>Modificar
-    Recibo Pensión</span></a>
-<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
-    Recibo Pensión</span></a>
-
+{% include 'facturacion/reciboPension_menu.html' %}
 {% endblock menu %}
 
 {% block contenido %}
-    <h1>Recibo de Pensión</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{form|crispy}}
-    </form>
+
+<div class="col p-5 mi-azul rounded-3 text-light">
+  <h1 class="display-5 text-center fw-bold">Crear Recibo Pensión</h1>
+  <form action="">
+    {% csrf_token %}
+    {{form|crispy}}
     <div class="text-center">
-        <button class="btn btn-light" type="submit"><i class="fas
-            fa-user-plus"></i> Crear Recibo de Pensión</button>
-      </div>
-{% endblock contenido %} 
+      <button class="btn btn-light" type="submit"><i class="fas
+          fa-user-plus"></i>Crear</button>
+    </div>
+  </form>
+</div>
+
+
+
+{% endblock contenido %}

@@ -1,1 +1,61 @@
 {% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Maranata</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}">
+  </head>
+  <body>
+
+    <div class="container justify-content-center w-75 bg-primary mt-5 mb-5
+      rounded shadow">
+      <div class="row align-items-stretch">
+        <div class="col bg d-inline col-md-5 col-lg-5 col-xl-6 rounded">
+          <div class="box">
+            <img src="{% static 'img/estudiante.png' %}">
+
+          </div>
+        </div>
+        <div class="col bg-white p-5 rounded ">
+          <img src="{% static 'img/Logomaranata.png' %}" width="250" alt="">
+
+          <h2 class="fw-bold text-center py-5">Inicio de sesión</h2>
+          <!--LOGIN-->
+
+          <form action="/inicio.html">
+            <div class="mb-4">
+              <label for="email" class="form-label">correo electrónico</label>
+              <input type="email" class="form-control"
+                value="Liceomaranata@gmail.com" name="email">
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <div class="mb-4 form-check">
+              <input type="checkbox" name="connected" class="form-check-input">
+              <label for="connected" class="form-check-label">Mantenerme
+                conectado</label>
+            </div>
+            <div class="d-grid">
+              <a href="{% url 'inicio' %}" type="submit" class="btn
+                btn-outline-primary w-100 my-1">Iniciar Sesión</a>
+            </div>
+            <div class="my-3 text-center">
+              <a href="#">¿Has olvidado la contraseña?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
