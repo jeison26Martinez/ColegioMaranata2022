@@ -1,7 +1,7 @@
 {% extends 'partials/body.html' %}
 
 {% block menu %}
-{% include 'estudiantes/usuarios_menu.html' %}
+{% include 'facturacion/reciboMatricula_menu.html' %}
 {% endblock menu %}
 
 {% block contenido %}
@@ -10,7 +10,7 @@
     <form class="row g-3 needs-validation" novalidate>
       <div class="p-5 mb-4 mi-azul rounded-3">
         <div class="container-fluid text-light py-5">
-          <h1 class="display-5 text-center fw-bold">Modificar Estudiante</h1>
+          <h1 class="display-5 text-center fw-bold">Modificar Recibo Matrícula</h1>
           <div class="row">
             <div class="col"> <label for="documento" class="form-label "> Tipo Documento</label>
               <select class="form-select" id="documento" required>
@@ -34,18 +34,42 @@
           </div>
           <div class="row">
             <div class="col">
-              <label for="nacimiento" class="form-label">Fecha Nacimiento</label>
+              <label for="nacimiento" class="form-label">Fecha de Matrícula</label>
               <input type="date" name="nacimiento" id="" class="form-control"></div>
             <div class="col"><label for="celular" class="form-label">Celular</label>
               <input type="tel" class="form-control" name="celular" placeholder="ej: 3219004573" required></div>
           </div>
           <div class="row">
+            <div class="col">
+              <label for="nacimiento" class="form-label">Fecha de pago Matrícula</label>
+              <input type="date" name="nacimiento" id="" class="form-control"></div>
+            <div class="col"><label for="celular" class="form-label">Valor de Matrícula por año</label>
+              <input type="tel" class="form-control" name="Ingresa el Valor" placeholder="EJ: 5.000.000" required></div>
+          </div>
+          <p>
+            <label for="favoriteOnly">Grado</label>
+            <select name="favoriteOnly" id="favoriteOnly">
+                <option>Prescolar</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+            </select>
+        </p>
+          <div class="row">
             <div class="col"> <label for="correo" class="form-label">Correo Electrónico</label>
               <input type="email" class="form-control" name="correo" placeholder="ej: liceomaranata@gmmail.com" required>
             </div>
           </div>
-          <div class="col"> <label for="" class="form-label">Dirección de Residencia</label>
-            <input type="text" class="form-control" name="Dirección Residencia" placeholder="EJ: Kra C5 - 01" required></div>
+
+
           <div class="row">
             <div class="col"> <label for="pass" class="form-label">Contraseña</label>
               <input type="password" class="form-control" name="pass" placeholder="Contraseña" required></div>
@@ -54,10 +78,9 @@
           </div>
         </div>
         <div class="text-center">
-          <button class="btn btn-light" type="submit"><i class="fas fa-pencil-square"></i> Modificar Estudiante</button>
+          <button class="btn btn-light" type="submit"><i class="fas fa-pencil-square"></i> Modificar</button>
         </div>
       </div> 
     </form>
   </div>
-
 {% endblock contenido %}

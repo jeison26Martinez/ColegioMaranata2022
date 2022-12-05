@@ -10,58 +10,56 @@
 <!-- DATOS PERSONALES -->
 
 <div class="col p-5 rounded mx-5">
-  <form class="row g-3 needs-validation" novalidate>
+  <form method="POST" class="row g-3 needs-validation">
+    
+    {% csrf_token %}
     <div class="p-5 mb-4 mi-azul rounded-3">
       <div class="container-fluid text-light py-5">
         <h1 class="display-5 text-center fw-bold">Crear Usuario</h4>
         <div class="row">
           <div class="col">
             <label for="documento" class="form-label"> Tipo Documento</label>
-            <select class="form-select" id="documento" required>
+            <select class="form-select" name="tipoDocumento" id="id_tipoDocumento" required>
               <option selected disabled value="">Tipo...</option>
-              <option value="">TI</option>
-              <option value="">CC</option>
+              <option value="C.C">Cédula de Ciudadanía</option>
+
+              <option value="T.I">Tarjeta de Identidad</option>
+
+              <option value="R.C">Registro Civil</option>
+
+              <option value="C.E">Cedúla de Extranjería</option>
+
+              <option value="P.E">Permiso Especial</option>
+
+              <option value="Otro">Pasaporte</option>
             </select>
           </div>
           <div class="col">
             <label for="n-documento" class="form-label">Número Documento</label>
             <input
-              type="text"
-              class="form-control"
-              id="n-documento"
-              placeholder="Número de Documento"
-              required
-            />
+              type="text"class="form-control"name="documento" id="n-documento"placeholder="Número de Documento"required/>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label for="nombre" class="form-label">Nombres</label>
             <input
-              type="text"
-              class="form-control"
-              name="nombre"
-              placeholder="Nombres"
-              required
+              type="text"class="form-control" name="nombres" id="id_nombres" placeholder="Nombres"required
             />
           </div>
           <div class="col">
-            <label for="apellido" class="form-label">Apellidos</label>
+            <label for="apellidos" class="form-label">Apellidos</label>
             <input
-              type="text"
-              class="form-control"
-              name="apellido"
-              placeholder="Apellidos"
-              required
-            />
+              type="text"class="form-control"name="apellidos" id="id_apellidos" placeholder="Apellidos"required/>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <label for="nacimiento" class="form-label">Fecha Nacimiento</label>
-            <input type="date" name="nacimiento" id="" class="form-control" />
+            <label for="fechaNacimiento" class="form-label">Fecha Nacimiento</label>
+            <input type="date" name="fechaNacimiento" id="id_fechaNacimiento" class="form-control" />
+            
           </div>
-          <div class="col">
+          <!--<div class="col">
             <label for="celular" class="form-label">Celular</label>
             <input
               type="tel"
@@ -70,32 +68,23 @@
               placeholder="Celular"
               required
             />
-          </div>
+          </div>!-->
         </div>
         <div class="row">
           <div class="col">
             <label for="correo" class="form-label">Correo Electrónico</label>
             <input
-              type="email"
-              class="form-control"
-              name="correo"
-              placeholder="liceomaranata@gmmail.com"
-              required
-            />
+              type="email"class="form-control"name="email" id="id_email" placeholder="liceomaranata@gmmail.com"required/>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label for="pass" class="form-label">Contraseña</label>
             <input
-              type="password"
-              class="form-control"
-              name="pass"
-              placeholder="Contraseña"
-              required
-            />
+              type="password"class="form-control"name="contrasena" id="id_contrasena" placeholder="Contraseña"required/>
           </div>
-          <div class="col">
+          
+          <!--<div class="col">
             <label for="r-pass" class="form-label">Confirmar Contraseña</label>
             <input
               type="password"
@@ -104,7 +93,7 @@
               placeholder="Confirmar Contraseña"
               required
             />
-          </div>
+          </div>!-->
         </div>
       </div>
       <div class="text-center">

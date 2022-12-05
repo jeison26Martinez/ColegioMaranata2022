@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5', #pip install crispy-bootstrap5
     'estudiantes',
     'facturacion',
+    
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
