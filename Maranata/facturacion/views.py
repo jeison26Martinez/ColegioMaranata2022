@@ -1,6 +1,6 @@
 from django.shortcuts import redirect,render
 from facturacion.forms import ReciboMatriculaForms,AñoLectivoForms,ReciboPensionForms,PazySalvoForms
-from facturacion.models import AñoLectivo,ReciboPension,PazySalvo
+from facturacion.models import AñoLectivo,ReciboPension,PazySalvo,ReciboMatricula
 # Create your views here.
 def reciboMatricula(request):
     form=ReciboMatriculaForms()
@@ -8,6 +8,22 @@ def reciboMatricula(request):
     'form':form
     }
     return render(request,'facturacion/reciboMatricula.html',context)
+
+
+def reciboMatricula_buscar(request):
+    reciboMatricula=ReciboMatricula.objects.all()
+    context={
+    'reciboMatricula':reciboMatricula
+    }
+    return render(request,'facturacion/reciboMatricula_buscar.html',context)
+
+
+def reciboMatricula_modificar(request):
+    reciboMatricula=ReciboMatricula.objects.all()
+    context={
+    'reciboMatricula':reciboMatricula
+    }
+    return render(request,'facturacion/reciboMatricula_modificar.html',context)
 
 
 def añoLectivo(request):

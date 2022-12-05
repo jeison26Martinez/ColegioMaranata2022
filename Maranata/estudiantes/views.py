@@ -26,7 +26,6 @@ def usuario_listar(request):
     usuarios=Usuario.objects.all()
     context={
         "usuarios":usuarios
-
     }
     return render(request,"estudiantes/usuarios_listar.html",context)
 

@@ -2,17 +2,11 @@
 {% load crispy_forms_tags %}
 
 {% block menu %}
-<a href="#"><i class="fas fa-user-plus"></i><span>Crear
-    Recibo Matrícula</span></a>
-<a href="#"><i class="fas fa-search"></i><span>Buscar
-    Recibo Matrícula</span></a>
-<a href="#"><i class="fas fa-user-edit"></i><span>Modificar
-    Recibo Matrícula</span></a>
-<a href="#"><i class="fas fa-clipboard-list"></i><span>Listar
-    Recibo Matrícula</span></a>
+{% include 'facturacion/reciboMatricula_menu.html' %}
 {% endblock menu %}
 
 {% block contenido %}
+<div class="col p-5 mi-azul rounded-3 text-light">
     <h1>Recibo Matrícula</h1>
     <form method="POST">
         {% csrf_token %}
@@ -23,4 +17,5 @@
     <button class="btn btn-light" type="submit"><i class="fas
         fa-user-plus"></i> Crear Recibo Matrícula</button>
   </div>
+</div>
 {% endblock contenido %} 

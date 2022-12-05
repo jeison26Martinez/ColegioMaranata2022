@@ -3,10 +3,29 @@
 }
 body {
     background: #0057fa;
-     background: linear-gradient( to right,#03527a,#ffffff);
+
+
+    background: hsla(191, 75%, 60%, 1);
+
+background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
 }
 .mi-azul{
-    background-color:#1531e4
+    background: hsla(191, 75%, 60%, 1);
+
+background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+
+border-radius: 30px;
+
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
 }
 
 .barra {
