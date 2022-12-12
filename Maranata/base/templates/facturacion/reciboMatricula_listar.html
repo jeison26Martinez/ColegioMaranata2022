@@ -1,0 +1,57 @@
+{% block menu %}
+{% include 'facturacion/reciboPension_menu.html' %}
+{% endblock menu %}
+
+{% block contenido %}
+
+ <!--TABLA-->
+ <div class="container-fluid rounded mx-10  ">
+    <form class="row g-3 needs-validation mi-azul" novalidate>
+      <div class="p-5 mb-10 bg-light rounded">
+
+        <!--TABLA-->
+        <table id="example" class="display " style="width:100%">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Mes Pagado</th>
+                  <th>Valor Pensión Mensual</th>
+                  <th>Fecha Pago Recibo Pensión</th>
+                  <th>Fecha Emisión Recibo</th>
+                  <th>Número Pensión</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+            
+            {% for ReciboPension in usuarios %}
+            <tr>
+                <td> {{usuario.id}} </td>
+                <td> {{usuario.mesPagado}} </td>
+                <td> {{usuario.valorP_M}} </td>
+                <td> {{usuario.fechaP_R_P}} </td>
+                <td> {{usuario.fechaE_R}} </td>
+                <td> {{usuario.numeroPension}} </td>                
+            </tr>
+            {% endfor %}
+                
+              
+
+      </table>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+      <script>
+          $(document).ready(function () {
+              $('#example').DataTable();
+          });
+      </script>
+      <script>
+          $("#menu-btn").click(function() {
+              $("#menu").toggleClass("active");
+          });
+      </script>
+      </div> 
+    </form>
+  </div>
+{% endblock contenido %}
