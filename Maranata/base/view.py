@@ -3,9 +3,7 @@ from estudiantes.forms import UsuarioForms
 from django.contrib import messages
 
 
-def login(request):
-    context={}
-    return render(request,'login.html', context)
+
 
 def inicioAdmin(request):
     context={}
